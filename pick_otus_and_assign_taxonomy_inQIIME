@@ -1,0 +1,14 @@
+#In QIIME, molecular operational taxonomic units (mOTU's) can be picked using: 
+pick_de_novo_otus.py -i groomedsequencefile.fasta -o de_novo_otus
+
+#In the 'de_novo_otus' folder that was created by 'pick_de_novo_otus.py' is a file named 'groomedsequencefile_rep_set.fasta'
+#move 'groomedsequencefile_rep_set.fasta'to a single folder containing 'taxadata.txt' and 'referencesequences.fasta' from the 'format_bold_output_for_ref.R' found in this repository
+
+#In the folder containing these three files, use: 
+assign_taxonomy.py -i groomedsequencefile_rep_set.fasta -o assigned_taxonomy -t taxadata.txt -r referencesequences.fasta --similarity 0.98 --uclust_max_accepts 10
+
+# '--similarity 0.98' can be changed to accomodate for lower levels of taxonomic assignment 
+# '--uclust_max_accepts 10' can be changed.  Higher numbers use more potential matches to assign taxonomy, but slows down computation speed.
+
+#information on pick_de_novo_otus.py (http://qiime.org/scripts/pick_de_novo_otus.html)
+#information on assign_taxonomy.py (http://qiime.org/scripts/assign_taxonomy.html)
