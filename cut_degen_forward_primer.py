@@ -1,5 +1,5 @@
 #Put this file in the same folder as your .fna file and open this file from that folder
-#Cut Mussel eDNA Primers for Q30 sequences 
+#Cut Primers for Q30 sequences 
 #requires Python2 & Biopython
 
 from Bio import SeqUtils
