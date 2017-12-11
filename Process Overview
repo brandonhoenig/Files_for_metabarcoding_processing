@@ -1,0 +1,12 @@
+1.) Pre-Processing:
+
+Recieve Illumina 250bp paired end sequencing data in .fastq format -> remove R2 files (for amplicons smaller than 250bp) or for 250+bp merge paired end reads from R1 and R2 files (in CLC Genomics Workbench or using 'join_paired_ends.py'in QIIME (http://qiime.org/scripts/join_paired_ends.html) -> CLC Genomics workbench for quality trimming to Phred > Q30 (1 error in every 1000 called bases). Output from this is a collection of .fa files for each sample -> Use these .fa files for Step 3
+
+2.) Creation and Manipulation of Reference Fasta File & Reference Taxonomy File:
+Using the .TSV output file from searching in the Barcode of Life Database (http://www.boldsystems.org/index.php/Public_BINSearch?searchtype=records)
+
+format_bold_output_for_ref.R -> Move output .txt and output .fasta file in folder for QIIME Processing
+
+3.) Metabarcoding Processing (Brief) - Files and Instruction found in this repository:
+
+add_qiime_labels_and_combine_fa_files -> cut_degen_forward_primer.py -> cut_degen_reverse_primer.py -> process_fasta_in_galaxy_instructions -> pick_otus_and_assign_taxonomy_inQIIME -> create_and_filter_OTU_table -> summarize_taxa_for_analysis
