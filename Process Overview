@@ -1,4 +1,4 @@
-1.) Pre-Processing:
+1.) Pre-Processing: 
 
 Recieve Illumina 250bp paired end sequencing data in .fastq format -> remove R2 files (for amplicons smaller than 250bp) or for 250+bp merge paired end reads from R1 and R2 files (in CLC Genomics Workbench or using 'join_paired_ends.py'in QIIME (http://qiime.org/scripts/join_paired_ends.html) -> CLC Genomics workbench for quality trimming to Phred > Q30 (1 error in every 1000 called bases). Output from this is a collection of .fa files for each sample -> Use these .fa files for Step 3
 
