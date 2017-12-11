@@ -1,0 +1,17 @@
+#In QIIME: 
+
+#Creation of OTU table with filtering for No. of sequences in an OTU and No. of times the OTU occurs across samples
+
+#In a single folder, deposit the groomedsequencefile_rep_tax_assignments.txt (found in 'assigned_taxonomy' folder), 
+  #groomedsequencefile_otus.txt (found in 'uclust_assigned_taxonomy' folder within the 'de_novo_otus folder'). 
+  
+#Run the following python script:
+make_otu_table.py -t groomedsequencefile_rep_tax_assignments.txt -i groomedsequencefile_otus.txt -o OTUTable.biom
+
+#If further processing of OTU table is necessary (removal of infrequent haplotypes) use this script below:
+filter_otus_from_otu_table.py -i OTUTable.biom -o Filtered_OTUTable.biom -n 10 -s 5
+  #-n 10 removes all OTUs with fewer than 10 sequences in them 
+  #-s 5 removes all OTUs that are not present in at least 5 samples 
+  
+make_otu_table.py information (http://qiime.org/scripts/make_otu_table.html)
+filter_otus_from_otu_table.py information (http://qiime.org/scripts/filter_otus_from_otu_table.html)
