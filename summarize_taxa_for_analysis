@@ -1,0 +1,17 @@
+#In QIIME:
+#Summarize the Final OTU Table into text files for manipulation in Excel, R, or Matplotlib
+
+#Use this python script to create plots and .txt files and deposit them into a folder:
+summarize_taxa_through_plots.py -i Filtered_OTUTable.biom -o summarized_taxa
+
+#This creates .txt files that end in 'L2' (Class-Level Assignment), 'L3' (Order-Level Assignment), 
+  #'L4' (Family-Level Assignment), 'L5' (Genus-Level Assignment), & 'L6' (Species-Level Assignment).
+  
+#When opened in Excel, rows are Taxonomic assignment and columns are SampleID as assigned in the SampleMappingFile.txt
+
+#Numbers in each cell are a percentage of sequences assigned to that taxonomy for each sample. 
+#The raw number of sequences for each cell can be calculated by multiplying the number in the cell by the corresponding 
+#number of sequences for each sample found in the output from:
+biom summarize-table -i Filtered_OTUTable.biom -o Summarized_Filtered_OTUTable.txt
+
+#Data can now be analyzed and manipulated in Excel, R, or Matplotlib
