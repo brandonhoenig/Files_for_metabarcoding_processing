@@ -2,7 +2,9 @@
 
 #upload seqs_w_primers_removed.fasta using 'Get Data' function in left tab in galaxy
 
-#In 'FASTA Manipulation' tab, use the filter sequences by length.
+#In 'FASTA Manipulation' tab, use the 'filter sequences by length' function to trim all sequences to correct amplicon size.
   #set 'Minimal length' and 'Maximum length' to your expected amplicon size
   #This amplicon size can be checked using 'Compute sequence length' in 'FASTA Manipulation' tab
   
+#Output from 'filter sequences by length' function can be downloaded from usegalaxy.org by pressing the floppy disc icon. 
+#Save this File as 'groomedsequencefile.fasta' and move it to working directory for QIIME
