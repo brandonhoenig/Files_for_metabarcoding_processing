@@ -1,6 +1,8 @@
+#In QIIME:
+
 ##Move output .fa files from Trimomatic/CLC Genomics Workbench to a single folder & navigate to that folder with 'cd' LINUX function
 
 #This function combines all .fa files into a single .fna file for sequence filtering
 add_qiime_labels.py -i $PWD -m SampleQIIMEMappingFile.txt -o combined_fasta -c InputFileName
 
-#output is 'combined_fasta.fna' and can be manipulated in cut_degen.py (found in this repository) to remove primer sequences
+#output is 'combined_fasta.fna' and can be manipulated in cut_degen.py to remove primer sequences
