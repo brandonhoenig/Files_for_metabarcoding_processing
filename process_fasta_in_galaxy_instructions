@@ -1,0 +1,8 @@
+#go to www.usegalaxy.org
+
+#upload seqs_w_primers_removed.fasta using 'Get Data' function in left tab in galaxy
+
+#In 'FASTA Manipulation' tab, use the filter sequences by length.
+  #set 'Minimal length' and 'Maximum length' to your expected amplicon size
+  #This amplicon size can be checked using 'Compute sequence length' in 'FASTA Manipulation' tab
+  
